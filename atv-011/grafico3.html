@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <title>grafico3</title>
+</head>
+<body>
+
+
+
+    </style> 
+    <div style="width: 300px; height: 300px;">
+    <canvas id="grafico3" style="width: 300px; height: 300px;"></canvas></div>
+    <script>
+        const ctx = document.getElementById('grafico3');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Saques de Janeiro', 'Saques de Fevereiro', 'Saques de Março', 'Saques de Abril', 'Saques de Maio', 'Saques de Junho'],
+            datasets: [{
+              label: '# of Votes',
+              data: [5, 11, 2, 10, 6, 8],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>

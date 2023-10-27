@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>grafico3</title>
+</head>
+<body>
+    <div style="width: 400px; height: 400px;">
+    <canvas id="grafico1" style="width: 400px; height: 400px;"></canvas></div>
+    <script>
+        const ctx = document.getElementById('grafico1');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['2023', '2022', '2021', '2020', '2019', '2018'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>
